@@ -1,1 +1,48 @@
-.texto {color: aliceblue;}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #444;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.texto {
+  color: aliceblue;
+}
+
+.texto-ilelao {
+  color: red;
+  text-align: center;
+  text-shadow: 2px 3px black;
+}
+
+nav {
+  padding: 5rem;
+  width: 100%;
+  background-color: antiquewhite;
+  position: relative;
+}
+
+ul {
+  display: inline;
+  float: right;
+  gap: 3rem;
+  flex-direction: row;
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  padding: 13px 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.santos {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
