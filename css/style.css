@@ -7,19 +7,15 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-}
-
-.texto {
-  color: aliceblue;
+  color: whitesmoke;
 }
 
 .texto-ilelao {
-  color: red;
-  text-align: center;
   text-shadow: 2px 3px black;
+  font-size: 30px;
 }
 
-nav {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,35 +25,133 @@ nav {
   transition: all 500ms;
 }
 
-ul {
+.header ul {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
   gap: 2.2rem;
   list-style: none;
-}
-
-li {
   float: right;
 }
 
-a {
+.header ul li a {
   border-radius: 20px;
   padding: 13px 10px;
   color: black;
   text-decoration: none;
 }
 
-ul li a:hover {
-  color: white;
-  background-color: #444;
+.header ul li a:hover {
   transition: all 500ms;
-}
-
-li:hover {
-  color: white;
+  text-decoration: underline;
 }
 
 .santos {
   height: 40px;
   width: 40px;
+}
+
+.account {
+  display: flex;
+  float: right;
+}
+
+.btn-account {
+  cursor: pointer;
+  border-radius: 10px;
+  border-color: transparent;
+  padding: 0.7rem;
+  background-color: #444;
+  color: whitesmoke;
+  font-weight: bold;
+  transition: 300ms;
+}
+
+.btn-account:hover {
+  background-color: whitesmoke;
+  color: #444;
+  transition: 300ms;
+  border-color: #44444494;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.victories-santos::after {
+  font: 800 40px system-ui;
+  content: counter(count);
+  animation: counter 5s linear infinite alternate;
+  counter-reset: count 0;
+  color: whitesmoke;
+}
+
+@keyframes counter {
+  0% {
+    counter-increment: count 1002;
+  }
+  10% {
+    counter-increment: count 2215;
+  }
+  20% {
+    counter-increment: count 32352;
+  }
+  30% {
+    counter-increment: count 321333;
+  }
+  40% {
+    counter-increment: count 22222231;
+  }
+  50% {
+    counter-increment: count 423333365;
+  }
+  60% {
+    counter-increment: count 5123213211;
+  }
+  100% {
+    counter-increment: count 1031232132111;
+  }
+}
+
+.stack {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.img-loop {
+  width: 300px;
+  height: 200px;
+  animation: image-loop 5s linear infinite alternate;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes image-loop {
+  0% {
+    background-image: url("../img/joao.jfif");
+  }
+  20% {
+    background-image: url("../img/gil.jpg");
+  }
+  40% {
+    background-image: url("../img/joao-paulo.jpg");
+  }
+  60% {
+    background-image: url("../img/hayner.jfif");
+  }
+  80% {
+    background-image: url("../img/joaquim.jpg");
+  }
+  100% {
+    background-image: url("../img/pituca.jfif");
+  }
 }
